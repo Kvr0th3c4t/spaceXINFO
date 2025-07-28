@@ -1,13 +1,17 @@
 import { Button } from '../layout/UI/Button'
 import { LaunchCountdown } from '../layout/NextLaunch/LaunchCountdown'
+import launchpadImg from '../../assets/LaunchesImg/launchpad.webp'
 
 export const NextLaunch = () => {
   return (
     <section className="text-neutral-100">
-      <div className="bg-[url('src/assets/LaunchesImg/launchpad.webp')] bg-cover bg-center bg-no-repeat bg-fixed 
-                     min-h-screen sm:min-h-screen md:min-h-screen lg:min-h-screen xl:h-dvh 2xl:h-dvh 
-                     w-full overflow-hidden 
-                     py-8 sm:py-10 md:py-12 lg:py-16 xl:py-0 2xl:py-0" >
+      <div
+        className="bg-cover bg-center bg-no-repeat bg-fixed 
+                   min-h-screen sm:min-h-screen md:min-h-screen lg:min-h-screen xl:h-dvh 2xl:h-dvh 
+                   w-full overflow-hidden 
+                   py-8 sm:py-10 md:py-12 lg:py-16 xl:py-0 2xl:py-0"
+        style={{ backgroundImage: `url(${launchpadImg})` }}
+      >
         <div className=" 
                        font-['Azonix'] 
                        w-full sm:w-full md:w-full lg:w-3xl xl:w-7xl 2xl:w-full

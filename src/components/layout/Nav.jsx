@@ -18,15 +18,20 @@ export const Nav = () => {
           <span className="font-['Azonix']">Space-X INFO</span>
         </a>
 
+        {/* MENÚ DESKTOP */}
         <div className="hidden lg:block">
           <ul className="flex flex-col mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center 
                          lg:gap-4 xl:gap-6 2xl:gap-8">
-            <li className="flex items-center p-1 text-sm text-slate-600 hover:scale-105 transition-transform">
+            <li className="flex items-center p-1 text-sm text-slate-600 hover:scale-105 transition-transform relative">
               <NavButton
                 text={"Próximo lanzamiento"}
                 href={"/nextLaunch"}
-                className={"px-3 lg:px-4 xl:px-5 2xl:px-6 text-xs lg:text-sm xl:text-sm 2xl:text-sm uppercase"}
+                className={"px-3 lg:px-4 xl:px-5 2xl:px-6 text-xs lg:text-sm xl:text-sm 2xl:text-sm uppercase relative"}
               />
+              <span className="absolute top-1 right-1 flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-60"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500"></span>
+              </span>
             </li>
             <li className="flex items-center p-1 text-sm text-slate-600 hover:scale-105 transition-transform">
               <NavButton
@@ -92,16 +97,21 @@ export const Nav = () => {
         </button>
       </div>
 
+      {/* MENÚ MÓVIL */}
       <div className={`lg:hidden transition-all duration-300 ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <ul className="flex flex-col gap-1 sm:gap-2 md:gap-2 
-                       mt-1 mb-2 sm:mt-2 sm:mb-3 md:mt-2 md:mb-4 
+                       mt-2 mb-2 sm:mt-3 sm:mb-3 md:mt-2 md:mb-4 
                        px-2 pb-2 sm:px-3 sm:pb-3 md:px-4 md:pb-4">
-          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+          <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600 relative">
             <NavButton
               text={"Próximo lanzamiento"}
               href={"/nextLaunch"}
-              className={"px-3 sm:px-4 md:px-5 text-xs sm:text-sm md:text-sm uppercase w-full"}
+              className={"px-3 sm:px-4 md:px-5 text-xs sm:text-sm md:text-sm uppercase w-full relative"}
             />
+            <span className="absolute top-1 right-1 flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-60"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500"></span>
+            </span>
           </li>
           <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
             <NavButton
