@@ -12,6 +12,7 @@ import { Launchers } from "../components/pages/Launchers";
 import { ShipDetail } from "../components/pages/ShipDetail";
 import { LaunchersDetail } from "../components/pages/LaunchersDetail";
 import { TripulationDetail } from "../components/pages/TripulationDetail"
+import { NotFound } from "../components/pages/NotFound";
 
 export const AppRoutes = () => {
     return (
@@ -33,6 +34,7 @@ export const AppRoutes = () => {
                     <Route path="/launcherDetail/:id" element={<LaunchersDetail />} />
                     <Route path="/tripulation" element={<Tripulation />} />
                     <Route path="/astronautDetail/:id" element={<TripulationDetail />} />
+                    <Route path="*" element={<NotFound />} />
 
                 </Routes>
             </section>
