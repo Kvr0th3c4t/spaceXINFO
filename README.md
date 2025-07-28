@@ -39,8 +39,6 @@
 
 ## 🛠️ Tecnologías utilizadas
 
-## 🛠️ Tecnologías
-
 ### Frontend
 - **React:** 19.1.0
 - **React DOM:** 19.1.0
